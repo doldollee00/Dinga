@@ -19,7 +19,7 @@
 
             color: white;
             text-shadow: 4px 4px 10px rgb(7, 0, 0);
-            min-height: 300px;
+
             background-image: url("https://search.pstatic.net/sunny/?src=https%3A%2F%2Fvelog.velcdn.com%2Fimages%2Fdnjsgml418%2Fpost%2F62764a61-39d4-440a-97b9-2581fbaf00c7%2Fsparta.png");
             background-position: center;
             background-size: cover;
@@ -100,15 +100,15 @@
             window.location.href = "mypage.html";
         })
         $("#main").click(async function () {
-            window.location.href = 'main.html'; // main.html로 이동
-        });
-
+              window.location.href = 'main.html'; // main.html로 이동
+            });
+        
         let docs = await getDocs(collection(db, "member"));
         docs.forEach((doc) => {
             let row = doc.data();
             console.log(row);
 
-            let name = row['name'];
+             let name = row['name'];
             let age = row['age'];
             let mbti = row['mbti'];
             let tmi = row['tmi'];
